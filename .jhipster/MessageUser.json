@@ -1,0 +1,50 @@
+{
+  "name": "MessageUser",
+  "fields": [
+    {
+      "fieldName": "receiveUserId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "receiveUsername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "receiveRealName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "read",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "readDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "message",
+      "otherEntityRelationshipName": "messageUser",
+      "relationshipName": "message"
+    }
+  ],
+  "entityTableName": "message_user",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "JHmicserDemo",
+  "clientRootFolder": "JHmicserDemo",
+  "databaseType": "sql",
+  "changelogDate": "20211020060825"
+}

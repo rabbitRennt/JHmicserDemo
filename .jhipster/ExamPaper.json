@@ -1,0 +1,86 @@
+{
+  "name": "ExamPaper",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paperType",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "gradeLevel",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "score",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "questionCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "suggestTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "limitStartDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "limitEneDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "frameTextContentId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "examPaperAnswer",
+      "otherEntityRelationshipName": "examPaper",
+      "relationshipName": "examPaperAnswer"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "taskExam",
+      "otherEntityRelationshipName": "examPaper",
+      "relationshipName": "taskExam"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "subject",
+      "otherEntityRelationshipName": "examPaper",
+      "relationshipName": "subject"
+    }
+  ],
+  "entityTableName": "exam_paper",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "JHmicserDemo",
+  "clientRootFolder": "JHmicserDemo",
+  "databaseType": "sql",
+  "changelogDate": "20211020060826"
+}

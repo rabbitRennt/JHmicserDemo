@@ -1,0 +1,68 @@
+{
+  "name": "ExamPaperAnswerDef",
+  "fields": [
+    {
+      "fieldName": "questionType",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customerScore",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "questionScore",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "questionTextContentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "answer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extConte",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "itemOrder",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "question",
+      "otherEntityRelationshipName": "examPaperAnswerDef",
+      "relationshipName": "question"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "examPaperAnswer",
+      "otherEntityRelationshipName": "examPaperAnswerDef",
+      "relationshipName": "examPaperAnswer"
+    }
+  ],
+  "entityTableName": "exam_paper_answer_def",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "JHmicserDemo",
+  "clientRootFolder": "JHmicserDemo",
+  "databaseType": "sql",
+  "changelogDate": "20211020060828"
+}

@@ -5,6 +5,23 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060822_added_entity_Subject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060823_added_entity_Question.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060824_added_entity_Message.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060825_added_entity_MessageUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060826_added_entity_ExamPaper.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060827_added_entity_ExamPaperAnswer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060828_added_entity_ExamPaperAnswerDef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060829_added_entity_TextContent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060830_added_entity_TaskExam.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060831_added_entity_TaskExamAnswer.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20211020060823_added_entity_constraints_Question.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060825_added_entity_constraints_MessageUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060826_added_entity_constraints_ExamPaper.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060827_added_entity_constraints_ExamPaperAnswer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060828_added_entity_constraints_ExamPaperAnswerDef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060830_added_entity_constraints_TaskExam.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211020060831_added_entity_constraints_TaskExamAnswer.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

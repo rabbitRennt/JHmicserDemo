@@ -1,0 +1,76 @@
+{
+  "name": "ExamPaperAnswer",
+  "fields": [
+    {
+      "fieldName": "paperName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paperType",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "systemScore",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "userScore",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "paperScore",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "questionCorrect",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "questionCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "doTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "examPaperAnswerDef",
+      "otherEntityRelationshipName": "examPaperAnswer",
+      "relationshipName": "examPaperAnswerDef"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "examPaper",
+      "otherEntityRelationshipName": "examPaperAnswer",
+      "relationshipName": "examPaper"
+    }
+  ],
+  "entityTableName": "exam_paper_answer",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "JHmicserDemo",
+  "clientRootFolder": "JHmicserDemo",
+  "databaseType": "sql",
+  "changelogDate": "20211020060827"
+}

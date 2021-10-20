@@ -1,0 +1,54 @@
+{
+  "name": "Message",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "sendUserid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sendUsername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "receiveUserCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "readCount",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "messageUser",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "messageUser"
+    }
+  ],
+  "entityTableName": "message",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "JHmicserDemo",
+  "clientRootFolder": "JHmicserDemo",
+  "databaseType": "sql",
+  "changelogDate": "20211020060824"
+}
