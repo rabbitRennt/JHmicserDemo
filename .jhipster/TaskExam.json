@@ -1,0 +1,66 @@
+{
+  "name": "TaskExam",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gradeLevel",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "frameTextContentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createByUserName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "taskExamAnswer",
+      "otherEntityRelationshipName": "taskExam",
+      "relationshipName": "taskExamAnswer"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "examPaper",
+      "otherEntityRelationshipName": "taskExam",
+      "relationshipName": "examPaper"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "textContent",
+      "otherEntityRelationshipName": "taskExam",
+      "relationshipName": "textContent"
+    }
+  ],
+  "entityTableName": "task_exam",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "JHmicserDemo",
+  "clientRootFolder": "JHmicserDemo",
+  "databaseType": "sql",
+  "changelogDate": "20211020060830"
+}

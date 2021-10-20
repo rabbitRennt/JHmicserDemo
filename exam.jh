@@ -1,0 +1,124 @@
+
+entity Subject {
+	name String,
+	level Integer,
+	levelName String,
+	itemOrder Integer,
+    deleted   Boolean
+}
+
+entity Question {
+    questionType String ,
+    score Integer ,
+    gradeLevel Integer ,
+    difficult Integer ,
+    correct String ,
+    infoTextContentId Integer ,
+    createBy String ,
+    createDate Instant,
+    status Integer ,
+    deleted Boolean
+}
+entity Message {
+    title String ,
+    content String ,
+    createDate Instant,
+    sendUserid String ,
+    sendUsername String ,
+    sendUsername String ,
+    receiveUserCount Integer ,
+    readCount Integer
+}
+entity MessageUser {
+       receiveUserId Long ,
+       receiveUsername String ,
+       receiveRealName String ,
+       read Boolean,
+       createDate Instant,
+       readDate Instant
+}
+
+entity ExamPaper {
+   name String ,
+   paperType Integer ,
+   gradeLevel Integer ,
+   score Integer ,
+   questionCount Integer ,
+   suggestTime  Integer ,
+   limitStartDate Instant,
+   limitEneDate Instant,
+   frameTextContentId Integer ,
+   createBy Long ,
+   createDate Long ,
+   deleted Boolean ,
+}
+entity ExamPaperAnswer{
+   paperName String ,
+   paperType Integer ,
+   systemScore Integer,
+   userScore Integer ,
+   paperScore Integer ,
+   questionCorrect Integer ,
+   questionCount  Integer ,
+   doTime Integer ,
+   status Integer ,
+   createBy Long ,
+   createDate Long
+}
+
+entity ExamPaperAnswerDef{
+
+
+    questionType Integer,
+    customerScore Integer,
+    questionScore Integer,
+    questionTextContentId Long,
+    answer String,
+    extConte Boolean ,
+    createBy String ,
+    createDate Instant,
+    itemOrder Integer
+}
+
+entity  TextContent {
+	content Blob,
+    createDate Instant,
+}
+
+entity TaskExam {
+	title String ,
+    gradeLevel Integer ,
+    frameTextContentId Long ,
+    createBy String ,
+    createByUserName String ,
+    createDate Instant ,
+    deleted Boolean
+}
+entity TaskExamAnswer {
+
+    createBy String ,
+    createDate Instant ,
+    textContentId Long
+}
+
+
+
+relationship OneToMany {
+	Subject to Question,
+    Subject to ExamPaper,
+	ExamPaper to ExamPaperAnswer,
+    ExamPaper to TaskExam,
+    Message to MessageUser,
+    Question  to ExamPaperAnswerDef,
+	ExamPaperAnswer  to ExamPaperAnswerDef,
+	TextContent to TaskExam,
+    TaskExam to TaskExamAnswer
+}
+
+
+
+paginate Subject, Question,ExamPaper,ExamPaperAnswer,Message ,TaskExam with infinite-scroll
+dto * with mapstruct
+service all with serviceImpl except Subject, Message,Question,ExamPaperAnswer
+
+

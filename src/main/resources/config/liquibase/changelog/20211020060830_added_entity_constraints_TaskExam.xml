@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    <!--
+        Added the constraints for entity TaskExam.
+    -->
+    <changeSet id="20211020060830-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="exam_paper_id"
+                                 baseTableName="task_exam"
+                                 constraintName="fk_task_exam__exam_paper_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="exam_paper"/>
+
+        <addForeignKeyConstraint baseColumnNames="text_content_id"
+                                 baseTableName="task_exam"
+                                 constraintName="fk_task_exam__text_content_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="text_content"/>
+    </changeSet>
+</databaseChangeLog>

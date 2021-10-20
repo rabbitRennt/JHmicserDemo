@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    <!--
+        Added the constraints for entity ExamPaperAnswerDef.
+    -->
+    <changeSet id="20211020060828-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="question_id"
+                                 baseTableName="exam_paper_answer_def"
+                                 constraintName="fk_exam_paper_answer_def__question_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="question"/>
+
+        <addForeignKeyConstraint baseColumnNames="exam_paper_answer_id"
+                                 baseTableName="exam_paper_answer_def"
+                                 constraintName="fk_exam_paper_answer_def__exam_paper_answer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="exam_paper_answer"/>
+    </changeSet>
+</databaseChangeLog>

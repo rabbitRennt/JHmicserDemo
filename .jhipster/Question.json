@@ -1,0 +1,72 @@
+{
+  "name": "Question",
+  "fields": [
+    {
+      "fieldName": "questionType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "score",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "gradeLevel",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "difficult",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "correct",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "infoTextContentId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "examPaperAnswerDef",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "examPaperAnswerDef"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "subject",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "subject"
+    }
+  ],
+  "entityTableName": "question",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "JHmicserDemo",
+  "clientRootFolder": "JHmicserDemo",
+  "databaseType": "sql",
+  "changelogDate": "20211020060823"
+}

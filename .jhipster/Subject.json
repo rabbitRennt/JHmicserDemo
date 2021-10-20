@@ -1,0 +1,52 @@
+{
+  "name": "Subject",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "level",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "levelName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itemOrder",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "question",
+      "otherEntityRelationshipName": "subject",
+      "relationshipName": "question"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "examPaper",
+      "otherEntityRelationshipName": "subject",
+      "relationshipName": "examPaper"
+    }
+  ],
+  "entityTableName": "subject",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "JHmicserDemo",
+  "clientRootFolder": "JHmicserDemo",
+  "databaseType": "sql",
+  "changelogDate": "20211020060822"
+}

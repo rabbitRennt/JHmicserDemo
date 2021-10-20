@@ -21,20 +21,29 @@
     "enableSocialSignIn": false,
     "useSass": false,
     "clientPackageManager": "yarn",
-    "testFrameworks": [
-      "cucumber"
-    ],
+    "testFrameworks": ["cucumber"],
     "enableTranslation": true,
     "nativeLanguage": "en",
-    "languages": [
-      "en"
-    ],
+    "languages": ["en"],
     "clientFramework": "angularX",
     "jhipsterVersion": "4.10.2",
     "packageFolder": "io/github/jhipster/application",
     "jwtSecretKey": "aa9c4499dd1aa41d2d1745cccd5d764220caf25f",
     "jhiPrefix": "jhi",
     "skipClient": true,
-    "skipUserManagement": true
+    "skipUserManagement": true,
+    "entities": [
+      "Subject",
+      "Question",
+      "Message",
+      "MessageUser",
+      "ExamPaper",
+      "ExamPaperAnswer",
+      "ExamPaperAnswerDef",
+      "TextContent",
+      "TaskExam",
+      "TaskExamAnswer"
+    ],
+    "lastLiquibaseTimestamp": 1634710111000
   }
 }
